@@ -1,0 +1,197 @@
+<!-- Form Controls -->
+    <!-- Date Input -->
+    <fieldset class="usa-fieldset-inputs">
+        <legend>Date of birth</legend>
+        <span class="usa-form-hint usa-datefield-hint" id="dobHint">For example: 04 28 1986</span>
+
+        <div class="usa-date-of-birth">
+            <div class="usa-datefield usa-form-group usa-form-group-month">
+                <label for="date_of_birth_1">Month</label>
+                <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+            </div>
+            <div class="usa-datefield usa-form-group usa-form-group-day">
+                <label for="date_of_birth_2">Day</label>
+                <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+            </div>
+            <div class="usa-datefield usa-form-group usa-form-group-year">
+                <label for="date_of_birth_3">Year</label>
+                <input aria-describedby="dobHint" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="usa-input-error">
+        <fieldset class="usa-fieldset-inputs">
+            <legend class="usa-input-error-label">Date of birth</legend>
+            <span id="date_of_birth-input-error" class="usa-input-error-message" role="alert">Helpful error message</span>
+            <span class="usa-form-hint usa-datefield-hint" id="dobHint">For example: 04 28 1986</span>
+
+            <div class="usa-date-of-birth">
+                <div class="usa-datefield usa-form-group usa-form-group-month">
+                    <label for="date_of_birth_1">Month</label>
+                    <input aria-describedby="date_of_birth-input-error" class="usa-form-control" id="date_of_birth_1" name="date_of_birth_1" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
+                </div>
+                <div class="usa-datefield usa-form-group usa-form-group-day">
+                    <label for="date_of_birth_2">Day</label>
+                    <input aria-describedby="date_of_birth-input-error" class="usa-form-control" id="date_of_birth_2" name="date_of_birth_2" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
+                </div>
+                <div class="usa-datefield usa-form-group usa-form-group-year">
+                    <label for="date_of_birth_3">Year</label>
+                    <input aria-describedby="date_of_birth-input-error" class="usa-form-control" id="date_of_birth_3" name="date_of_birth_3" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- Buttons -->
+
+    <h6>Primary Button</h6>
+    <div class="button_wrapper">
+        <button>Default</button>
+        <button class="usa-button-active">Active</button>
+        <button class="usa-button-hover">Hover</button>
+    </div>
+
+    <h6>Secondary Buttons</h6>
+    <div class="button_wrapper">
+        <button class="usa-button-secondary">Default</button>
+        <button class="usa-button-secondary usa-button-active">Active</button>
+        <button class="usa-button-secondary usa-button-hover">Hover</button>
+    </div>
+
+    <div class="button_wrapper">
+        <button class="usa-button-outline" type="button">Default</button>
+        <button class="usa-button-outline usa-button-active">Active</button>
+        <button class="usa-button-outline usa-button-hover">Hover</button>
+    </div>
+
+    <div class="button_wrapper button_wrapper-dark">
+        <button class="usa-button-outline-inverse" type="button">Default</button>
+        <button class="usa-button-outline-inverse usa-button-active">Active</button>
+        <button class="usa-button-outline-inverse usa-button-hover">Hover</button>
+    </div>
+
+    <h6>Disabled Button</h6>
+    <div class="button_wrapper">
+        <button class="usa-button-disabled">Default</button>
+    </div>
+
+    <h6>Button with cancel</h6>
+    <div class="button_wrapper">
+        <a class="usa-cancel" href="#">cancel</a>
+        <button>Cancel</button>
+    </div>
+
+    <h6>Dismiss Button</h6>
+    <div class="button_wrapper">
+        <button class="usa-button-dismiss"><span class="usa-sr-only">Dismiss</span>
+        </button>
+    </div>
+
+    <h6>Button Focus</h6>
+    <div class="button_wrapper">
+        <button class="usa-button-focus">Default</button>
+        <button class="usa-button-primary-alt usa-button-focus">Default</button>
+        <button class="usa-button-secondary usa-button-focus">Default</button>
+    </div>
+
+    <!-- Accordion -->
+    <h6>Borderless</h6>
+    <div class="usa-accordion">
+        <ul class="usa-unstyled-list">
+            <li>
+                <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-1">Collapsed Accordion 1</button>
+                <div id="collapsible-1" aria-hidden="true" class="usa-accordion-content">
+                    <ol>
+                        <li>This</li>
+                        <li>accordion</li>
+                        <li>was</li>
+                        <li>collapsed</li>
+                        <li>initially.</li>
+                    </ol>
+                </div>
+            </li>
+            <li>
+                <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-0">Expanded Accordion 1</button>
+                <div id="collapsible-0" aria-hidden="false" class="usa-accordion-content">
+                    <p>This accordion started expanded.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h6>Bordered</h6>
+    <div class="usa-accordion-bordered">
+        <ul class="usa-unstyled-list">
+            <li>
+                <button class="usa-button-unstyled" aria-expanded="false" aria-controls="collapsible-1">Collapsed Accordion 1</button>
+                <div id="collapsible-1" aria-hidden="true" class="usa-accordion-content">
+                    <ul>
+                        <li>This</li>
+                        <li>accordion</li>
+                        <li>was</li>
+                        <li>collapsed</li>
+                        <li>initially.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-0">Expanded Accordion 1</button>
+                <div id="collapsible-0" aria-hidden="false" class="usa-accordion-content">
+                    <p>This accordion started expanded.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Alerts -->
+    <div class="usa-alert usa-alert-success">
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Success Status</h3>
+            <p class="usa-alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        </div>
+    </div>
+
+    <div class="usa-alert usa-alert-warning">
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Warning Status</h3>
+            <p class="usa-alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        </div>
+    </div>
+
+    <div class="usa-alert usa-alert-error" role="alert">
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Error Status</h3>
+            <p class="usa-alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        </div>
+    </div>
+
+    <div class="usa-alert usa-alert-info">
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Information Status</h3>
+            <p class="usa-alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        </div>
+    </div>
+
+    <div class="usa-alert usa-alert-info">
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Information Status</h3>
+            <p class="usa-alert-text">Multi line. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui atione voluptatem sequi nesciunt. Neque porro quisquam est, qui doloremipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+
+    <div class="usa-alert usa-alert-info">
+        <form>
+            <button class="usa-button-dismiss"><span class="usa-sr-only">dismiss</span>
+            </button>
+        </form>
+        <div class="usa-alert-body">
+            <h3 class="usa-alert-heading">Information Status</h3>
+            <p class="usa-alert-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        </div>
+    </div>
+
+
+    <p style="color:red">{{error}}</p>
+    <h1>Countries</h1>
+    <div *ngFor="#country of countries">{{country.name}}</div>

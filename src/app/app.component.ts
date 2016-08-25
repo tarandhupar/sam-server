@@ -49,8 +49,7 @@ export class XLarge {
   ],
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    'app.style.css',    
-    '../../node_modules/samwds/dist/css/samwds.min.css'
+    'app.style.css'
   ],
   template: `
  <div id="header"></div>

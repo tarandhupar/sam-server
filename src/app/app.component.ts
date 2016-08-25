@@ -64,7 +64,7 @@ export class XLarge {
         <router-outlet></router-outlet>
   </main>
 
-  <div id="tform"></div>
+  
   <div id="footer"></div>
 
    
@@ -73,18 +73,16 @@ export class XLarge {
 export class App implements OnInit{
   title: string = 'ftw';
   data = {};
-  server: string;
-  labelText : any;
+  server: string;  
   footerText : any; 
   headerText : any;
 
   constructor(public dcl:DynamicComponentLoader, 
-      public _injector:Injector) { 
-    var dataItem = {type:"large", data:"Test"};
-    this.labelText =  label.render(dataItem);
+      public _injector:Injector) {    
+    
     this.footerText = footer.render({});
     this.headerText = header.render({});
-    this.dcl.loadAsRoot(compileToComponent('label',this.labelText),"#tform",this._injector);
+    
     this.dcl.loadAsRoot(compileToComponent('footer',this.footerText),"#footer",this._injector);
     this.dcl.loadAsRoot(compileToComponent('header',this.headerText),"#header",this._injector);
 

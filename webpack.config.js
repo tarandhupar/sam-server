@@ -18,7 +18,7 @@ var commonConfig = {
   plugins: [
     new CopyWebpackPlugin([
         { from: 'node_modules/samwds/dist/fonts', to: 'fonts' },
-        { from: 'src/assets', to: 'assets/img' },
+        { from: 'node_modules/samwds/dist', to: 'assets' },
         { from: 'src/img', to: 'img' },
         { from: 'src/js', to: 'js' }
       ])

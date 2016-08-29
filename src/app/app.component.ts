@@ -1,23 +1,13 @@
 import { Component, Directive, ElementRef, Renderer, ViewEncapsulation, DynamicComponentLoader, OnInit , Injector} from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ComponentInjectService } from './service/component.inject.service.ts';
+import { InputTypeConstants } from './constants/input.type.constants.ts';
 import '../js/samuikit.js';
 
 // templateUrl example
 import { Home } from './home';
 import { Opportunity } from './opportunities';
 
-declare var label: any;
-declare var footer: any;
-declare var header: any;
-
-function compileToComponent(selector,template) {
-  @Component({ 
-    selector, 
-    template 
-  })
-  class FakeComponent {};
-  return FakeComponent;
-}
 //
 /////////////////////////h
 // ** Example Directive
@@ -37,8 +27,6 @@ export class XLarge {
 }
 
 
-
-
 /////////////////////////
 // ** MAIN APP COMPONENT **
 @Component({
@@ -51,45 +39,26 @@ export class XLarge {
   styleUrls: [
     'app.style.css'
   ],
-  template: `
- <div id="header"></div>
-
-   <nav>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./home'] ">Home</a>
-    <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./opportunity'] ">Opportunities</a>
-  </nav>
-
-  <main>
-        <router-outlet></router-outlet>
-  </main>
-
-  
-  <div id="footer"></div>
-
-   
-  `
+  templateUrl: 'app.template.html',
+  providers : [ComponentInjectService,InputTypeConstants]
 })
 export class App implements OnInit{
   title: string = 'ftw';
   data = {};
-  server: string;  
-  footerText : any; 
-  headerText : any;
+  server: string;
 
-  constructor(public dcl:DynamicComponentLoader, 
-      public _injector:Injector) {    
-    
-    this.footerText = footer.render({});
-    this.headerText = header.render({});
-    
-    this.dcl.loadAsRoot(compileToComponent('footer',this.footerText),"#footer",this._injector);
-    this.dcl.loadAsRoot(compileToComponent('header',this.headerText),"#header",this._injector);
+  constructor(public dcl:DynamicComponentLoader,public _injector:Injector,private _componentInjectService : ComponentInjectService) {
 
+    this._componentInjectService = _componentInjectService;
+
+    this.dcl.loadAsRoot(_componentInjectService.injectComponent('header',{}),"#header",this._injector);
+    this.dcl.loadAsRoot(_componentInjectService.injectComponent('footer',{}),"#footer",this._injector);
+    
   }
 
   ngOnInit() {
-    
-    
+
+
   }
 
 }

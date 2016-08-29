@@ -1,4 +1,4 @@
-import 'reflect-metadata';
+/*import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import {it, describe, expect, beforeEach, inject} from '@angular/core/testing';
 import {setBaseTestProviders} from '@angular/core/testing';
@@ -31,8 +31,4 @@ describe('Home Component', () => {
     expect(home.sayHello()).toBe('Hello John');
   });
 
-});
-
-
-
- 
+});*/

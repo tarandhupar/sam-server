@@ -1,0 +1,15 @@
+<!-- includes HTML for app component-->
+<div>
+  <div id="header"></div>
+  <nav>
+   <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./home'] ">Home</a>
+   <a [routerLinkActive]="['active', 'router-link-active']" [routerLink]=" ['./opportunity'] ">Opportunities</a>
+  </nav>
+</div>
+
+ <main>
+       <router-outlet></router-outlet>
+ </main>
+
+
+ <div id="footer"></div>

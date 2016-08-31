@@ -3,6 +3,7 @@ import { DataService } from '../../backend/api.ts';
 import { Configuration } from '../../backend/app.constants.ts';
 import { ComponentInjectService } from '../service/component.inject.service.ts';
 import { InputTypeConstants } from '../constants/input.type.constants.ts';
+import {ButtonComponent} from '../commons/button.component.ts';
 
 @Component({
   selector: 'opportunity',
@@ -10,11 +11,16 @@ import { InputTypeConstants } from '../constants/input.type.constants.ts';
     'opportunity.style.css'
   ],
   templateUrl: 'opportunity.template.html',
-  providers: [DataService, Configuration, ComponentInjectService, InputTypeConstants]
+  providers: [DataService, Configuration, ComponentInjectService, InputTypeConstants],
+  directives: [ButtonComponent]
 })
 export class Opportunity {
 	private error : string;
 	private countries;
+  dataItem1 : any = {type:"alt", data:"Default"};
+  dataItem2 : any = {type:"default", data:"Default"};
+  //console.log("opps" + dataItem1);
+  //public labels = "btn2";
 
     constructor(private _dataService: DataService, private _componentInjectService : ComponentInjectService, public dcl:DynamicComponentLoader,
       public _injector:Injector){
@@ -53,7 +59,7 @@ export class Opportunity {
         this.dcl.loadAsRoot(_componentInjectService.injectComponent('button',{type:"big", data:"Default"}),"#button22",this._injector);
         this.dcl.loadAsRoot(_componentInjectService.injectComponent('button',{type:"big", data:"Active"}),"#button23",this._injector);
         this.dcl.loadAsRoot(_componentInjectService.injectComponent('button',{type:"big", data:"Hover"}),"#button24",this._injector);
-
+        //this.dcl.loadN
 
     }
     ngOnInit() {
